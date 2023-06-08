@@ -1,0 +1,13 @@
+extends base.pug
+
+block content   
+    form(method="GET").search__form
+        input(type="text", placeholder="Search by title", name="keyword")
+        button 
+            i.fas.fa-search 
+
+    .video-grid 
+        each video in videos 
+            +video(video)
+        else 
+            span.empty__message No videos found

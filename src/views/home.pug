@@ -1,7 +1,9 @@
-doctype html
-html(lang="ko")
-    head 
-        title Wetube 
-    body 
-        h1 Welcome to Wetube 
-        footer &copy; 2021 Wetube
+extends base.pug
+include mixins/video
+
+block content 
+    div.video-grid
+        each video in videos 
+            +video(video)
+        else 
+            span.empty__message No videos found
