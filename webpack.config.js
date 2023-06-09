@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const path = require("path");
 
-const BASE_JS = "./src.client/js";
+const BASE_JS = "./src/client/js/";
 
 module.exports = {
   plugins: [
@@ -16,8 +16,6 @@ module.exports = {
     recorder: BASE_JS + "recorder.js",
     commentSection: BASE_JS + "commentSection.js",
   },
-  mode: "development",
-  watch: true,
   output: {
     filename: "js/[name].js",
     path: path.resolve(__dirname, "assets"),
